@@ -1,0 +1,208 @@
+{
+  "version": "5.11.2.dev169+g89a615e5d",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "Raam",
+      "points": [
+        [
+          256.15384615384613,
+          130.0
+        ],
+        [
+          513.0769230769231,
+          237.69230769230768
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          622.3076923076923,
+          131.53846153846152
+        ],
+        [
+          874.6153846153845,
+          239.23076923076923
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          979.2307692307692,
+          137.69230769230768
+        ],
+        [
+          1231.5384615384614,
+          239.23076923076923
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          534.6153846153845,
+          348.46153846153845
+        ],
+        [
+          700.7692307692307,
+          463.8461538461538
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          786.9230769230769,
+          354.6153846153846
+        ],
+        [
+          876.1538461538461,
+          462.30769230769226
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          546.9230769230769,
+          576.1538461538462
+        ],
+        [
+          703.8461538461538,
+          685.3846153846154
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          783.8461538461538,
+          577.6923076923077
+        ],
+        [
+          860.7692307692307,
+          677.6923076923077
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          183.84615384615384,
+          360.7692307692308
+        ],
+        [
+          342.30769230769226,
+          460.7692307692308
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          3.8461538461538467,
+          128.46153846153845
+        ],
+        [
+          154.6153846153846,
+          234.6153846153846
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          705.3846153846154,
+          354.6153846153846
+        ],
+        [
+          776.1538461538461,
+          519.2307692307693
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          711.5384615384615,
+          576.1538461538462
+        ],
+        [
+          785.3846153846154,
+          751.5384615384615
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\to_label\\image_30.jpg",
+  "imageData": null,
+  "imageHeight": 960,
+  "imageWidth": 1440
+}

@@ -1,0 +1,314 @@
+{
+  "version": "5.11.2.dev169+g89a615e5d",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "Raam",
+      "points": [
+        [
+          445.38461538461536,
+          505.38461538461536
+        ],
+        [
+          565.3846153846154,
+          353.07692307692304
+        ],
+        [
+          617.6923076923076,
+          310.0
+        ],
+        [
+          726.9230769230769,
+          282.3076923076923
+        ],
+        [
+          726.9230769230769,
+          546.9230769230769
+        ],
+        [
+          443.8461538461538,
+          550.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          1154.6153846153845,
+          373.07692307692304
+        ],
+        [
+          1188.4615384615383,
+          340.7692307692308
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "circle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          573.0769230769231,
+          546.9230769230769
+        ],
+        [
+          674.6153846153845,
+          668.4615384615385
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          900.7692307692307,
+          545.3846153846155
+        ],
+        [
+          950.0,
+          654.6153846153846
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          319.2307692307692,
+          545.3846153846155
+        ],
+        [
+          397.6923076923077,
+          665.3846153846154
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          205.3846153846154,
+          543.8461538461539
+        ],
+        [
+          266.9230769230769,
+          659.2307692307693
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          279.2307692307692,
+          551.5384615384615
+        ],
+        [
+          316.15384615384613,
+          651.5384615384615
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          397.6923076923077,
+          557.6923076923077
+        ],
+        [
+          429.99999999999994,
+          654.6153846153846
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          446.9230769230769,
+          556.1538461538462
+        ],
+        [
+          485.38461538461536,
+          662.3076923076924
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          522.3076923076923,
+          554.6153846153846
+        ],
+        [
+          562.3076923076923,
+          665.3846153846154
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          491.5384615384615,
+          553.0769230769231
+        ],
+        [
+          523.8461538461538,
+          665.3846153846154
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          810.0,
+          353.07692307692304
+        ],
+        [
+          860.7692307692307,
+          450.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          897.6923076923076,
+          340.7692307692308
+        ],
+        [
+          954.6153846153845,
+          442.30769230769226
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          810.0,
+          522.3076923076924
+        ],
+        [
+          865.3846153846154,
+          537.6923076923077
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          899.2307692307692,
+          519.2307692307693
+        ],
+        [
+          954.6153846153845,
+          533.0769230769231
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          810.0,
+          548.4615384615385
+        ],
+        [
+          859.2307692307692,
+          602.3076923076924
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\to_label\\image_36.jpg",
+  "imageData": null,
+  "imageHeight": 960,
+  "imageWidth": 1440
+}

@@ -1,0 +1,288 @@
+{
+  "version": "5.11.2.dev169+g89a615e5d",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "Raam",
+      "points": [
+        [
+          579.2307692307692,
+          371.53846153846155
+        ],
+        [
+          725.3846153846154,
+          440.7692307692308
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          768.4615384615385,
+          383.8461538461538
+        ],
+        [
+          799.2307692307692,
+          414.6153846153846
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          762.3076923076923,
+          505.38461538461536
+        ],
+        [
+          808.4615384615385,
+          611.5384615384615
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          597.6923076923076,
+          486.9230769230769
+        ],
+        [
+          722.3076923076923,
+          579.2307692307693
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          617.6923076923076,
+          254.6153846153846
+        ],
+        [
+          757.6923076923076,
+          306.9230769230769
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Zonnepaneel",
+      "points": [
+        [
+          865.3846153846154,
+          242.3076923076923
+        ],
+        [
+          877.6923076923076,
+          260.7692307692308
+        ],
+        [
+          945.3846153846154,
+          262.3076923076923
+        ],
+        [
+          933.076923076923,
+          239.23076923076923
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          917.6923076923076,
+          380.7692307692308
+        ],
+        [
+          950.0,
+          417.6923076923077
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          913.076923076923,
+          502.30769230769226
+        ],
+        [
+          954.6153846153845,
+          605.3846153846155
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          1339.230769230769,
+          508.46153846153845
+        ],
+        [
+          1386.923076923077,
+          613.0769230769231
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          1182.3076923076922,
+          490.0
+        ],
+        [
+          1311.5384615384614,
+          579.2307692307693
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          994.6153846153845,
+          488.46153846153845
+        ],
+        [
+          1122.3076923076922,
+          579.2307692307693
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          1159.2307692307693,
+          365.38461538461536
+        ],
+        [
+          1302.3076923076922,
+          442.30769230769226
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          1343.8461538461538,
+          380.7692307692308
+        ],
+        [
+          1377.6923076923076,
+          417.6923076923077
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          946.9230769230769,
+          265.38461538461536
+        ],
+        [
+          1079.2307692307693,
+          308.46153846153845
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          1160.7692307692307,
+          262.3076923076923
+        ],
+        [
+          1297.6923076923076,
+          308.46153846153845
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\to_label\\image_124.jpg",
+  "imageData": null,
+  "imageHeight": 960,
+  "imageWidth": 1440
+}
