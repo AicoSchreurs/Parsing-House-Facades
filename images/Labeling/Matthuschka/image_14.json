@@ -1,0 +1,220 @@
+{
+  "version": "5.11.2.dev169+g89a615e5d",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "Raam",
+      "points": [
+        [
+          688.4615384615385,
+          374.6153846153846
+        ],
+        [
+          730.0,
+          485.38461538461536
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          734.6153846153845,
+          371.53846153846155
+        ],
+        [
+          774.6153846153845,
+          486.9230769230769
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          776.1538461538461,
+          360.7692307692308
+        ],
+        [
+          816.1538461538461,
+          483.8461538461538
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          1083.8461538461538,
+          534.6153846153846
+        ],
+        [
+          1113.076923076923,
+          646.9230769230769
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Deur",
+      "points": [
+        [
+          1257.6923076923076,
+          537.6923076923077
+        ],
+        [
+          1356.1538461538462,
+          646.9230769230769
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          986.9230769230769,
+          513.0769230769231
+        ],
+        [
+          1043.8461538461538,
+          631.5384615384615
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Zonnepaneel",
+      "points": [
+        [
+          1031.5384615384614,
+          279.2307692307692
+        ],
+        [
+          1159.2307692307693,
+          397.6923076923077
+        ],
+        [
+          1236.1538461538462,
+          423.8461538461538
+        ],
+        [
+          1145.3846153846152,
+          348.46153846153845
+        ],
+        [
+          1145.3846153846152,
+          348.46153846153845
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "polygon",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          625.3846153846154,
+          536.1538461538462
+        ],
+        [
+          671.5384615384615,
+          633.0769230769231
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          673.076923076923,
+          530.0
+        ],
+        [
+          710.0,
+          636.1538461538462
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          706.9230769230769,
+          530.0
+        ],
+        [
+          751.5384615384615,
+          631.5384615384615
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "Raam",
+      "points": [
+        [
+          751.5384615384615,
+          531.5384615384615
+        ],
+        [
+          791.5384615384615,
+          611.5384615384615
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\to_label\\image_14.jpg",
+  "imageData": null,
+  "imageHeight": 960,
+  "imageWidth": 1440
+}
