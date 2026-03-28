@@ -433,7 +433,7 @@
       "mask": null
     }
   ],
-  "imagePath": "..\\to_label\\image_42.jpg",
+  "imagePath": "..\\image_42.jpg",
   "imageData": null,
   "imageHeight": 960,
   "imageWidth": 1440
