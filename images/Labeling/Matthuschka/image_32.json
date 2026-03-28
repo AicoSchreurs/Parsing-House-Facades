@@ -135,7 +135,7 @@
       "mask": null
     }
   ],
-  "imagePath": "..\\to_label\\image_32.jpg",
+  "imagePath": "..\\image_32.jpg",
   "imageData": null,
   "imageHeight": 960,
   "imageWidth": 1440
