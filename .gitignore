@@ -1,2 +1,7 @@
 # PyTorch model files
 *.pth
+
+/images/original/*
+/images/resized/*
+/images/grayscale/*
+/sam2/checkpoints/*
