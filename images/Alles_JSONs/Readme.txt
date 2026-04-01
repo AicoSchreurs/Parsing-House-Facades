@@ -23,7 +23,6 @@ for file in os.listdir(folder_input):
         data_str = data_str.replace('"zonnepaneel"', '"Zonnepaneel"')
         data_str = data_str.replace('"solar"', '"Zonnepaneel"')
         data_str = data_str.replace('"zonnepanelen"', '"Zonnepaneel"')
-        data_str = data_str.replace('"..\\"', '""')
 
         # Converteer terug naar JSON
         data = json.loads(data_str)
