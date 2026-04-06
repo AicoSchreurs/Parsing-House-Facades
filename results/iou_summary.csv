@@ -1,0 +1,10 @@
+Condition,Label,mean,std,count
+grayscale,deur,0.8186,0.3293,444
+grayscale,raam,0.8543,0.2871,1734
+grayscale,zonnepaneel,0.7304,0.3993,102
+original,deur,0.6086,0.1788,444
+original,raam,0.5515,0.1719,1734
+original,zonnepaneel,0.7031,0.1736,102
+resized,deur,0.7266,0.3556,444
+resized,raam,0.6512,0.3812,1734
+resized,zonnepaneel,0.4561,0.4296,102
