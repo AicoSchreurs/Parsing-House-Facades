@@ -50,7 +50,7 @@ Run all cells in order. The notebook is structured in the following logical bloc
 Sets device (CUDA / MPS / CPU), defines all directory paths, label colors, and SAM2 hyperparameters.
 
 #### 2. Data preparation
-Copies images and their corresponding LabelMe JSOn annotation files from `images/Alles/` and `images/Alles_JSONs/` into `images/original/`.
+Copies images and their corresponding LabelMe JSON annotation files from `images/Alles/` and `images/Alles_JSONs/` into `images/original/`.
 
 #### 3. Image preprocessing
 Generates the thwo alternative mage conditions:
