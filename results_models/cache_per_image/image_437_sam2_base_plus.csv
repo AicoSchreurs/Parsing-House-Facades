@@ -1,0 +1,5 @@
+model,file,json_file,label,gt_index,iou,dice,n_gt_objects,n_generated_masks,n_filtered_masks,runtime_sec,image_mean_iou,image_mean_dice,points_per_batch_used
+sam2_base_plus,image_437.jpg,image_437.json,raam,0,0.0,0.0,4,48,1,3.4837729930877686,0.17812028657616893,0.20802598260486624,128
+sam2_base_plus,image_437.jpg,image_437.json,raam,1,0.0,0.0,4,48,1,3.4837729930877686,0.17812028657616893,0.20802598260486624,128
+sam2_base_plus,image_437.jpg,image_437.json,raam,2,0.7124811463046757,0.832103930419465,4,48,1,3.4837729930877686,0.17812028657616893,0.20802598260486624,128
+sam2_base_plus,image_437.jpg,image_437.json,raam,3,0.0,0.0,4,48,1,3.4837729930877686,0.17812028657616893,0.20802598260486624,128
