@@ -1,7 +1,9 @@
 # :house_with_garden: Parsing house facades - notebooks
 
-## :bricks: Color transformation &amp; image resizing
-This [notebook](./color-resizing-kyana.ipynb) investigates the impact of image resizing and grayscale conversion on the segmentation performance of SAM2 (Segment Anything Model 2) applied to house facade images. Ground truth annotations were created manually using LabelMe with three semantic labels: **Raam** (window), **Deur** (door) and **Zonnepaneel** (solar panel).
+## :bricks: Color transformation &amp; image resizing &amp; occlusion
+The first [notebook](./color-resizing-kyana.ipynb) investigates the impact of image resizing and grayscale conversion on the segmentation performance of SAM2 (Segment Anything Model 2) applied to house facade images. Ground truth annotations were created manually using LabelMe with three semantic labels: **Raam** (window), **Deur** (door) and **Zonnepaneel** (solar panel).
+
+The second notebook [notebook](./occlusion-matthuschka.ipynb) investigates the impact of occlusion on the segmentation performance of SAM2 (Segment Anything Model 2) applied to house facade images. Ground truth annotations were created manually using LabelMe with three semantic labels: **Raam** (window), **Deur** (door) and **Zonnepaneel** (solar panel). In the images the ground truth labeled segments can be occluded.
 
 ### Project structure
 ```
@@ -11,7 +13,10 @@ PARSING-HOUSE-FACADES/
 │   ├── Alles_JSONs/            # All LabelMe annotation JSONs
 │   ├── original/               # Images + JSONs used for evaluation (copied from above)
 │   ├── resized/                # 512×512 padded images + transformed JSONs
-│   └── grayscale/              # Grayscale images + copied JSONs
+│   ├── grayscale/              # Grayscale images + copied JSONs
+│   ├── occluded/               # Images that have ground truth that is occluded
+│   └── not_occluded/           # Images that have ground truth that is NOT occluded
+│
 ├── installations/
 │   └── install.sh
 ├── sam2/
@@ -20,7 +25,8 @@ PARSING-HOUSE-FACADES/
 ├── outputs/                    # Visualizations per image per condition
 ├── results/                    # CSV output and analysis plots
 └── notebooks/
-    └── color-resizing-kyana.ipynb
+    ├── color-resizing-kyana.ipynb
+    └── occlusion-matthuschka.ipynb
 ```
 
 ### Requirements
