@@ -1,8 +1,8 @@
 # :house_with_garden: Parsing house facades - notebooks
 
-## 🧱 Multiple Models, Preprocessing & Occlusion
+## :bricks: Multiple Models, Preprocessing & Occlusion
 
-This [project](./SAM project.ipynb) investigates the automatic segmentation of Dutch residential house facades using different variants of the Segment Anything Model (SAM), SAM2, and FastSAM.
+This [project](./SAM%20project.ipynb) investigates the automatic segmentation of Dutch residential house facades using different variants of the Segment Anything Model (SAM), SAM2, and FastSAM.
 
 The goal of this project is to evaluate:
 - which model performs best
@@ -42,12 +42,17 @@ PARSING-HOUSE-FACADES/
 ├── results/                    # CSV results and plots
 │
 ├── notebooks/
-│   ├── SAM Project.ipynb
-│   └── Funda Scraper.ipynb
+│   ├── SAM project.ipynb
+│   └── funda scraper.ipynb
 ```
 
 ### Requirements
-Install the required packages using the file [install.sh](../installations/install.sh).
+Install the required packages using the file [install.sh](../installations/install.sh) as follows:
+```bash
+cd installations
+./install.sh
+```
+> If this doesn't work, try opening Git Bash inside the installations folder and run `bash install.sh` in the Git Bash GUI
 
 Install SAM2 using the [official instructions](https://github.com/facebookresearch/segment-anything-2).
 > The sam2 directory is already mainly available here in this project
@@ -57,6 +62,7 @@ Download the SAM2 checkpoints:
 cd checkpoints
 ./download_ckpts.sh
 ```
+> If this doesn't work, try opening Git Bash inside the checkpoints folder and run `bash download_ckpts.sh` in the Git Bash GUI
 
 The notebook uses the **different** checkpoints. If you want to use a different model or size, update **SELECTED_MODEL** constant at the top of the notebook:
 
