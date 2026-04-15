@@ -1,0 +1,7 @@
+model,condition,file,json_file,label,gt_index,iou,dice,n_gt_objects,n_gt_matched,n_gt_missed,n_generated_masks,n_filtered_masks,runtime_sec,image_mean_iou,image_mean_dice,points_per_batch_used,overlap_mode
+sam2_small,grayscale,image_450.jpg,image_450.json,raam,0,0.0,0.0,6,1,5,31,1,2.890019178390503,0.10744119873652336,0.13065561931065134,128,best
+sam2_small,grayscale,image_450.jpg,image_450.json,raam,1,0.0,0.0,6,1,5,31,1,2.890019178390503,0.10744119873652336,0.13065561931065134,128,best
+sam2_small,grayscale,image_450.jpg,image_450.json,raam,2,0.0,0.0,6,1,5,31,1,2.890019178390503,0.10744119873652336,0.13065561931065134,128,best
+sam2_small,grayscale,image_450.jpg,image_450.json,raam,3,0.0,0.0,6,1,5,31,1,2.890019178390503,0.10744119873652336,0.13065561931065134,128,best
+sam2_small,grayscale,image_450.jpg,image_450.json,raam,4,0.0,0.0,6,1,5,31,1,2.890019178390503,0.10744119873652336,0.13065561931065134,128,best
+sam2_small,grayscale,image_450.jpg,image_450.json,deur,5,0.6446471924191401,0.783933715863908,6,1,5,31,1,2.890019178390503,0.10744119873652336,0.13065561931065134,128,best

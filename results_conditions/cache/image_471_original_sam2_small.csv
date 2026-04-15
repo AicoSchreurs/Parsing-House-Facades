@@ -1,0 +1,6 @@
+model,condition,file,json_file,label,gt_index,iou,dice,n_gt_objects,n_gt_matched,n_gt_missed,n_generated_masks,n_filtered_masks,runtime_sec,image_mean_iou,image_mean_dice,points_per_batch_used,overlap_mode
+sam2_small,original,image_471.jpg,image_471.json,raam,0,0.0,0.0,5,1,4,41,1,3.1445517539978027,0.10296640323607627,0.1359443187578039,128,best
+sam2_small,original,image_471.jpg,image_471.json,deur,1,0.0,0.0,5,1,4,41,1,3.1445517539978027,0.10296640323607627,0.1359443187578039,128,best
+sam2_small,original,image_471.jpg,image_471.json,raam,2,0.5148320161803813,0.6797215937890195,5,1,4,41,1,3.1445517539978027,0.10296640323607627,0.1359443187578039,128,best
+sam2_small,original,image_471.jpg,image_471.json,deur,3,0.0,0.0,5,1,4,41,1,3.1445517539978027,0.10296640323607627,0.1359443187578039,128,best
+sam2_small,original,image_471.jpg,image_471.json,raam,4,0.0,0.0,5,1,4,41,1,3.1445517539978027,0.10296640323607627,0.1359443187578039,128,best

@@ -1,0 +1,7 @@
+model,condition,file,json_file,label,gt_index,iou,dice,n_gt_objects,n_gt_matched,n_gt_missed,n_generated_masks,n_filtered_masks,runtime_sec,image_mean_iou,image_mean_dice,points_per_batch_used,overlap_mode
+sam2_small,grayscale,image_482.jpg,image_482.json,deur,0,0.0,0.0,6,3,3,59,3,3.2046144008636475,0.2719106658585609,0.3501763618103059,128,best
+sam2_small,grayscale,image_482.jpg,image_482.json,raam,1,0.0,0.0,6,3,3,59,3,3.2046144008636475,0.2719106658585609,0.3501763618103059,128,best
+sam2_small,grayscale,image_482.jpg,image_482.json,raam,2,0.6083347894460948,0.7564778097669618,6,3,3,59,3,3.2046144008636475,0.2719106658585609,0.3501763618103059,128,best
+sam2_small,grayscale,image_482.jpg,image_482.json,raam,3,0.6003187481889307,0.7502489724229091,6,3,3,59,3,3.2046144008636475,0.2719106658585609,0.3501763618103059,128,best
+sam2_small,grayscale,image_482.jpg,image_482.json,raam,4,0.0,0.0,6,3,3,59,3,3.2046144008636475,0.2719106658585609,0.3501763618103059,128,best
+sam2_small,grayscale,image_482.jpg,image_482.json,raam,5,0.4228104575163399,0.5943313886719647,6,3,3,59,3,3.2046144008636475,0.2719106658585609,0.3501763618103059,128,best
