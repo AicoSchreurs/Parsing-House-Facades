@@ -11,22 +11,18 @@ PARSING-HOUSE-FACADES/
 ├── images/
 │   ├── Alles/                  # All raw source images
 │   ├── Alles_JSONs/            # All LabelMe annotation JSONs
-│   ├── original/               # Images + JSONs used for evaluation (copied from above)
+│   ├── original/               # Images + JSONs used for evaluation
 │   ├── resized/                # 512×512 padded images + transformed JSONs
 │   ├── grayscale/              # Grayscale images + copied JSONs
-│   ├── occluded/               # Images that have ground truth that is occluded
-│   └── not_occluded/           # Images that have ground truth that is NOT occluded
 │
-├── installations/
-│   └── install.sh
-├── sam2/
-│   └── checkpoints/
-│       └── sam2.1_hiera_small.pt
-├── outputs/                    # Visualizations per image per condition
-├── results/                    # CSV output and analysis plots
-└── notebooks/
-    ├── color-resizing-kyana.ipynb
-    └── occlusion-matthuschka.ipynb
+├── checkpoints/				 # Model weights
+│               
+│
+├── outputs/                    # Visualizations per image
+├── results/                    # CSV results and plots
+│
+├── notebooks/
+│   └── SAM Project.ipynb
 ```
 
 ### Requirements
@@ -41,11 +37,20 @@ cd checkpoints
 ./download_ckpts.sh
 ```
 
-The notebook uses the **small** checkpoint (`sam2.1_hiera_small.pt`). If you want to use a different model size, update these two constants at the top of the notebook:
+The notebook uses the **different** checkpoints. If you want to use a different model or size, update **SELECTED_MODEL** constant at the top of the notebook:
 
 ```python
-SAM2_CHECKPOINT_PATH = "../sam2/checkpoints/sam2.1_hiera_small.pt"
-SAM2_MODEL_CONFIG_PATH = "configs/sam2.1/sam2.1_hiera_s.yaml"
+BENCHMARK_MODELS = [
+    "sam_vit_b",
+    "sam_vit_l",
+    "sam_vit_h",
+    "sam2_small",
+    "sam2_base_plus",
+    "sam2_large",
+    "fastsam_s",
+    "fastsam_x",
+]
+SELECTED_MODEL = "fastsam_x"
 ```
 
 
@@ -63,8 +68,8 @@ Generates the thwo alternative mage conditions:
 - **Resized**: aspect-ratio-preserving resize to 512x512 with black padding. Annotation coordinates are transformed accordingly (scaled + shifted to match the padding).
 - **Grayscale**: BGR-to-grayscale conversion. Annotation coordinates remain unchanged since the resolution does not change.
 
-#### 4. SAM2 model loading
-Builds the SAM2 model and creates an `SAM2AutomaticMaskGenerator` with the following key settings:
+#### 4. SAM model loading
+Builds the SAM2 model and creates an `SAMAutomaticMaskGenerator` with the following key settings:
 
 | Parameter | Value | Effect |
 |---|---|---|
@@ -72,6 +77,10 @@ Builds the SAM2 model and creates an `SAM2AutomaticMaskGenerator` with the follo
 | `pred_iou_thresh` | 0.75 | Only high-confidence masks are kept |
 | `stability_score_thresh` | 0.9 | Filters unstable masks |
 | `min_mask_region_area` | 250 | Removes very small noise segments |
+
+#### 5. FastSAM model loading
+Builds the FastSAM model and creates an `FastSAM` object.
+
 
 #### 5. Helper functions
 Defines all core functions used in the evaluation pipeline:
@@ -91,20 +100,19 @@ Defines all core functions used in the evaluation pipeline:
 #### 6. Evaluation loop
 Iterates over all annotated images and runs the full pipeline for eacht of the three conditions:
 
-**Original** - SAM2 runs on the unmodified image. Filtered masks are stored as the reference baseline.
+**Original** - SAM runs on the unmodified image. Filtered masks are stored as the reference baseline.
 
-**Resized** - SAM2 runs on the 512x512 padded image. Filtered masks are reprojected back to the original resolution before being compared to the original masks via IoU.
+**Resized** - SAM runs on the 512x512 padded image. Filtered masks are reprojected back to the original resolution before being compared to the original masks via IoU.
 
-**Grayscale** - SAM2 runs on the grayscale image (loaded as RGB with repeated channels). Filtered masks are compared directly to the original masks via IoU since the resolution is unchanged.
+**Grayscale** - SAM runs on the grayscale image (loaded as RGB with repeated channels). Filtered masks are compared directly to the original masks via IoU since the resolution is unchanged.
 
-All results are saved to `results/sam2_results.csv` with columns:
-`Condition`, `File`, `Label`, `IoU`.
+All results are saved to `results_conditions/condition_instance_results.csv` with columns:
+``, ``, ``, ``.
 
 #### 7. Analysis &amp; visualisation
-Loads `sam2_results.csv` adn produces:
 
-- **Summary table** (`iou_summary.csv`): mean, std, and count of IoU per condition per label.
-- **Bar chart** (`iou_per_label.png`): mean IoU grouped by label and condition.
+- **Summary table**: mean, std, and count of IoU per condition per label.
+- **Bar chart**: mean IoU grouped by label and condition.
 - **Wilcoxon signed-rank tests**: statistical significance of the difference between original and each alternative condition (paied per file + label).
 - **Relative IoU drop**: percentage change in mean IoU for resized and grayscale relative to original, per label
 
@@ -113,12 +121,10 @@ Loads `sam2_results.csv` adn produces:
 
 | File | Description |
 |---|---|
-| `outputs/<name>_original.png` | Visualization: ground truth + SAM2 masks on original image |
-| `outputs/<name>_resized.png` | Visualization: ground truth + SAM2 masks on resized image |
-| `outputs/<name>_grayscale.png` | Visualization: ground truth + SAM2 masks on grayscale image |
-| `results/sam2_results.csv` | Raw IoU scores per condition, file, and label |
-| `results/iou_summary.csv` | Aggregated mean/std IoU per condition per label |
-| `results/iou_per_label.png` | Bar chart of mean IoU per label per condition |
+| `outputs/<name>_original.png` | Visualization: ground truth + SAM masks on original image |
+| `outputs/<name>_resized.png` | Visualization: ground truth + SAM masks on resized image |
+| `outputs/<name>_grayscale.png` | Visualization: ground truth + SAM masks on grayscale image |
+| `results/condition_instance_results.csv` | Raw IoU scores per condition, file, and label |
 
 
 ### Design choices
