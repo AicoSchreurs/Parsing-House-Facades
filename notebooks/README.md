@@ -108,15 +108,26 @@ Defines all core functions used in the evaluation pipeline:
 
 | Function | Description |
 |---|---|
-| `polygon_to_mask` | Converts a LabelMe polygon to a binary mask |
-| `circle_to_mask` | Converts a LabelMe circle (center + edge point) to a binary mask |
-| `rectangle_to_mask` | Converts a LabelMe rectangle (two corner points) to a binary mask |
-| `load_gt_masks` | Loads all shapes from a LabelMe JSON into binary masks |
-| `compute_iou` | Computes Intersection over Union between two binary masks |
-| `filter_masks_by_annotation` | Keeps only SAM2 masks that overlap sufficiently with an annotation zone (default IoU threshold: 0.3) |
-| `reproject_mask_to_original` | Maps a resized mask back to the original image resolution for fair comparison |
-| `match_and_score` | For each original mask, finds the best-matching mask from another condition by label and IoU |
-| `save_masked_visualization` | Saves a side-by-side figure showing ground truth annotations and SAM2 masks |
+| `find_labelme_json_files` | Searches a directory and returns all LabelMe JSON files. Used to iterate over the dataset. |
+| `resolve_image_path` | Finds the corresponding image file for a given JSON annotation. Ensures correct pairing of data. |
+| `load_image_rgb` | Loads an image from disk and converts it to RGB format, which is required for all models. |
+| `polygon_to_mask` | Converts a polygon annotation from LabelMe into a binary mask. |
+| `circle_to_mask` | Converts a circle annotation (center + edge) into a binary mask. |
+| `rectangle_to_mask` | Converts a rectangle annotation into a binary mask. |
+| `load_gt_masks` | Loads all annotations from a LabelMe JSON file and converts them into binary masks with labels. |
+| `compute_iou` | Calculates Intersection over Union (IoU) between two masks. Main evaluation metric. |
+| `compute_dice` | Calculates Dice score between two masks. Used as additional evaluation metric. |
+| `filter_masks_by_annotation_overlap` | Filters predicted masks by checking if they overlap with a ground truth object above a threshold. |
+| `match_predictions` | Matches predicted masks to ground truth masks based on highest IoU. |
+| `score_gt_objects_against_predictions` | Calculates IoU and Dice per ground truth object. Used for detailed evaluation. |
+| `combine_predictions_per_gt` | Combines multiple predicted masks for the same object into one. Reduces duplicate detections. |
+| `reproject_mask_to_original` | Maps masks from resized images back to original resolution for fair comparison. |
+| `run_model_on_image` | Runs the selected segmentation model (SAM, SAM2, or FastSAM) on an image and returns masks. |
+| `save_masked_visualization` | Creates and saves a side-by-side visualization of ground truth and predictions. |
+| `get_cache_path` | Generates a file path for caching results per image/model. |
+| `load_from_cache` | Loads cached results if they exist to avoid recomputation. |
+| `save_to_cache` | Saves results to disk for faster future runs. |
+| `cleanup_memory` | Clears memory after processing an image to prevent memory issues. |
 
 #### 6. Evaluation loop
 Iterates over all annotated images and runs the full pipeline for eacht of the three conditions:
@@ -142,10 +153,13 @@ All results are saved to `results_conditions/condition_instance_results.csv` wit
 
 | File | Description |
 |---|---|
-| `outputs/<name>_original.png` | Visualization: ground truth + SAM masks on original image |
-| `outputs/<name>_resized.png` | Visualization: ground truth + SAM masks on resized image |
-| `outputs/<name>_grayscale.png` | Visualization: ground truth + SAM masks on grayscale image |
-| `results/condition_instance_results.csv` | Raw IoU scores per condition, file, and label |
+| `results_benchmark/cache/<name>_<model>.csv` | raw meta score of each image + label |
+| `visuals_benchmark/<name>_<model>.png` | Visualization: ground truth + every model masks on image |
+| `results_benchmark/benchmark_instance_results.csv` | Raw meta scores per model, file, label and other meta data |
+| `results_conditions/cache/<name>_<method>_<model>.csv` | raw meta score of each image + label |
+| `visuals_conditions/<name>_<method>_<model>.png` | Visualization: ground truth + SAM each method masks on image |
+| `results_conditions/condition_instance_results.csv` | Raw meta scores per model, condition, file, label and other meta data |
+
 
 
 ### Design choices
