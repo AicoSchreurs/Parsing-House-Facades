@@ -1,7 +1,5 @@
 # :house_with_garden: Parsing house facades - notebooks
 
-## :bricks: Multiple Models & Color transformation &amp; image resizing &amp; occlusion
-
 ## 🧱 Multiple Models, Preprocessing & Occlusion
 
 This [project](./SAM project.ipynb) investigates the automatic segmentation of Dutch residential house facades using different variants of the Segment Anything Model (SAM), SAM2, and FastSAM.
