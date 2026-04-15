@@ -1,9 +1,32 @@
 # :house_with_garden: Parsing house facades - notebooks
 
-## :bricks: Color transformation &amp; image resizing &amp; occlusion
-The first [notebook](./color-resizing-kyana.ipynb) investigates the impact of image resizing and grayscale conversion on the segmentation performance of SAM2 (Segment Anything Model 2) applied to house facade images. Ground truth annotations were created manually using LabelMe with three semantic labels: **Raam** (window), **Deur** (door) and **Zonnepaneel** (solar panel).
+## :bricks: Multiple Models & Color transformation &amp; image resizing &amp; occlusion
 
-The second notebook [notebook](./occlusion-matthuschka.ipynb) investigates the impact of occlusion on the segmentation performance of SAM2 (Segment Anything Model 2) applied to house facade images. Ground truth annotations were created manually using LabelMe with three semantic labels: **Raam** (window), **Deur** (door) and **Zonnepaneel** (solar panel). In the images the ground truth labeled segments can be occluded.
+## 🧱 Multiple Models, Preprocessing & Occlusion
+
+This [project](./SAM project.ipynb) investigates the automatic segmentation of Dutch residential house facades using different variants of the Segment Anything Model (SAM), SAM2, and FastSAM.
+
+The goal of this project is to evaluate:
+- which model performs best
+- how preprocessing affects segmentation performance
+- how occlusion impacts segmentation results
+
+The segmentation focuses on three labels:
+- **Raam** (window)  
+- **Deur** (door)  
+- **Zonnepaneel** (solar panel)  
+
+All experiments are implemented in a single unified notebook, where the full pipeline is executed step by step.
+
+First, multiple segmentation models are evaluated on the original dataset to determine which model performs best. This includes several variants of SAM, SAM2, and FastSAM.
+
+After selecting the best-performing model, additional experiments are performed to analyze the impact of preprocessing. Two preprocessing techniques are applied:
+- resizing images to a fixed resolution (512×512 with padding)
+- converting images to grayscale
+
+Finally, the effect of occlusion is analyzed. The dataset is divided into two groups: occluded and not occluded images. This allows for evaluating how partial visibility of facade elements (caused by vegetation such as trees and hedges) influences segmentation performance.
+
+Ground truth annotations are created manually using LabelMe and are used to evaluate the segmentation quality using Intersection over Union (IoU).
 
 ### Project structure
 ```
