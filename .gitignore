@@ -3,4 +3,4 @@
 
 /images/resized/*
 /images/grayscale/*
-/sam2/checkpoints/*.pt
+/checkpoints/*.pt
