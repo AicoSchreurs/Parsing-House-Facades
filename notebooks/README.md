@@ -2,11 +2,11 @@
 
 ## :bricks: Multiple Models, Preprocessing & Occlusion
 
-This [project](./SAM%20project.ipynb) investigates the automatic segmentation of Dutch residential house facades using different variants of the Segment Anything Model (SAM), SAM2, and FastSAM.
+This project investigates the automatic segmentation of Dutch residential house facades using different variants of the Segment Anything Model (SAM), SAM2, and FastSAM.
 
 The goal of this project is to evaluate:
-- which model performs best
-- how preprocessing affects segmentation performance
+- which model out of the tested variants performs best
+- how image preprocessing affects segmentation performance
 - how occlusion impacts segmentation results
 
 The segmentation focuses on three labels:
@@ -14,11 +14,11 @@ The segmentation focuses on three labels:
 - **Deur** (door)  
 - **Zonnepaneel** (solar panel)  
 
-All experiments are implemented in a single unified notebook, where the full pipeline is executed step by step.
+All experiments are implemented in [this single unified notebook](./SAM%20project.ipynb), where the full pipeline is executed step by step.
 
 First, multiple segmentation models are evaluated on the original dataset to determine which model performs best. This includes several variants of SAM, SAM2, and FastSAM.
 
-After selecting the best-performing model, additional experiments are performed to analyze the impact of preprocessing. Two preprocessing techniques are applied:
+After selecting the best-performing model, additional experiments are performed to analyze the impact of image preprocessing. Two preprocessing techniques are applied:
 - resizing images to a fixed resolution (512×512 with padding)
 - converting images to grayscale
 
@@ -34,16 +34,16 @@ PARSING-HOUSE-FACADES/
 │   ├── Alles_JSONs/            # All LabelMe annotation JSONs
 │   ├── original/               # Images + JSONs used for evaluation
 │   ├── resized/                # 512×512 padded images + transformed JSONs
-│   ├── grayscale/              # Grayscale images + copied JSONs
+│   └── grayscale/              # Grayscale images + copied JSONs
 │
 ├── checkpoints/                # Model weights
 │
 ├── outputs/                    # Visualizations per image
 ├── results/                    # CSV results and plots
 │
-├── notebooks/
-│   ├── SAM project.ipynb
-│   └── funda scraper.ipynb
+└── notebooks/
+    ├── SAM project.ipynb
+    └── funda scraper.ipynb
 ```
 
 ### Requirements
@@ -55,7 +55,7 @@ cd installations
 > If this doesn't work, try opening Git Bash inside the installations folder and run `bash install.sh` in the Git Bash GUI
 
 Install SAM2 using the [official instructions](https://github.com/facebookresearch/segment-anything-2).
-> The sam2 directory is already mainly available here in this project
+> The sam2 directory is already mainly available here (except the checkpoints) in this project, so normally you can skip this installation
 
 Download the SAM2 checkpoints:
 ```bash
