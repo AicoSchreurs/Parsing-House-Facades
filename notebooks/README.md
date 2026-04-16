@@ -189,7 +189,7 @@ All results are saved to `results_conditions/condition_instance_results.csv` wit
 
 ### Design choices
 
-**Why use original as reference instead of ground truth?**<br>
+**Why use original as reference instead of ground truth for image resizing and grascale conversion?**<br>
 The LabelMe annotations were drawn slightly larger than the actual objects (e.g. a window annotation includes a small border of brickwork) to give SAM2 room to find the precise boudnary. Because of this, the annotations are not strict ground truth. Instead, original SAM2 masks serve as the reference baseline, and resized/grayscale masks are compared against them.
 
 **Why reproject resized masks?**<br>
