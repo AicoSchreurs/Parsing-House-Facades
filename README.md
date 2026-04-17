@@ -57,14 +57,14 @@ cd installations
 Install SAM2 using the [official instructions](https://github.com/facebookresearch/segment-anything-2).
 > The sam2 directory is already mainly available here (except the checkpoints) in this project, so normally you can skip this installation
 
-Download the SAM2 checkpoints:
+Download the necessary checkpoints for this project:
 ```bash
 cd checkpoints
 ./download_ckpts.sh
 ```
 > If this doesn't work, try opening Git Bash inside the checkpoints folder and run `bash download_ckpts.sh` in the Git Bash GUI
 
-The notebook uses the **different** checkpoints. If you want to use a different model or size, update **SELECTED_MODEL** constant at the top of the notebook:
+The notebook uses the following **different** checkpoints. If you want to use a different model or size, update **SELECTED_MODEL** constant at the top of the notebook:
 
 ```python
 BENCHMARK_MODELS = [
@@ -95,8 +95,9 @@ Generates the thwo alternative mage conditions:
 - **Resized**: aspect-ratio-preserving resize to 512x512 with black padding. Annotation coordinates are transformed accordingly (scaled + shifted to match the padding).
 - **Grayscale**: BGR-to-grayscale conversion. Annotation coordinates remain unchanged since the resolution does not change.
 
-#### 4. SAM model loading
-Builds the SAM2 model and creates an `SAMAutomaticMaskGenerator` with the following key settings:
+#### 4. Model loading
+##### SAM 1 &amp; 2
+Builds the SAM 1 and 2 model, and creates a `SamAutomaticMaskGenerator` for SAM 1 and a `SAM2AutomaticMaskGenerator` for SAM2 with the following key settings:
 
 | Parameter | Value | Effect |
 |---|---|---|
@@ -105,8 +106,8 @@ Builds the SAM2 model and creates an `SAMAutomaticMaskGenerator` with the follow
 | `stability_score_thresh` | 0.9 | Filters unstable masks |
 | `min_mask_region_area` | 250 | Removes very small noise segments |
 
-#### 5. FastSAM model loading
-Builds the FastSAM model and creates an `FastSAM` object.
+##### FastSAM
+Builds the FastSAM model and creates a `FastSAM` object.
 
 
 #### 5. Helper functions
@@ -136,7 +137,7 @@ Defines all core functions used in the evaluation pipeline:
 | `cleanup_memory` | Clears memory after processing an image to prevent memory issues. |
 
 #### 6. Evaluation loop
-Iterates over all annotated images and runs the full pipeline for eacht of the three conditions:
+Iterates over all annotated images and runs the full pipeline for each of the three conditions:
 
 **Original** - SAM runs on the unmodified image. Filtered masks are stored as the reference baseline.
 
@@ -198,7 +199,7 @@ Resized images are 512x512 while originals vary in resolution. To compute meanin
 **Why load grayscale images as RGB?**<br>
 SAM2 requires 3-channel output. Grayscale images are loaded via `PIL.Image.convert("RGB")`, which repeats the grayscale channel across R, G, and B. This means SAM2 still receives valid 3-channel input, but without any colour information - exactly the condition being tested.
 
-## Funda Scraper
+## :house: Funda Scraper
 
 [Simple scraper](./notebooks/funda%20scraper.ipynb) for downloading house listings from https://funda.nl
 
