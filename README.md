@@ -197,3 +197,36 @@ Resized images are 512x512 while originals vary in resolution. To compute meanin
 
 **Why load grayscale images as RGB?**<br>
 SAM2 requires 3-channel output. Grayscale images are loaded via `PIL.Image.convert("RGB")`, which repeats the grayscale channel across R, G, and B. This means SAM2 still receives valid 3-channel input, but without any colour information - exactly the condition being tested.
+
+## Funda Scraper
+
+Simple scraper for downloading house listings from https://funda.nl
+
+### What it does
+- Loops through search pages (`?page=`)
+- Collects listing detail URLs
+- Downloads photos via `/media/foto/1..N`
+- Scrapes listing features → saves as `features.json`
+- Skips listings if data already exists
+- Optional: only download first photo (`first_only=True`)
+
+### Install
+```
+pip install -U selenium pandas requests
+
+Make sure ChromeDriver is installed.
+```
+
+### Usage
+```python
+main(
+    search_url=SEARCH_URL,
+    out_root="funda_photos",
+    max_listings=500,
+    max_pages=20,
+    headless=False,
+    also_scrape_features=True,
+    skip_if_features_json_exists=True,
+    first_only=False,
+)
+```
