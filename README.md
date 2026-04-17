@@ -14,7 +14,7 @@ The segmentation focuses on three labels:
 - **Deur** (door)  
 - **Zonnepaneel** (solar panel)  
 
-All experiments are implemented in [this single unified notebook](./SAM%20project.ipynb), where the full pipeline is executed step by step.
+All experiments are implemented in [this notebook](./notebooks/SAM%20project.ipynb), where the full pipeline is executed step by step.
 
 First, multiple segmentation models are evaluated on the original dataset to determine which model performs best. This includes several variants of SAM, SAM2, and FastSAM.
 
@@ -200,7 +200,7 @@ SAM2 requires 3-channel output. Grayscale images are loaded via `PIL.Image.conve
 
 ## Funda Scraper
 
-Simple scraper for downloading house listings from https://funda.nl
+[Simple scraper](./notebooks/funda%20scraper.ipynb) for downloading house listings from https://funda.nl
 
 ### What it does
 - Loops through search pages (`?page=`)
